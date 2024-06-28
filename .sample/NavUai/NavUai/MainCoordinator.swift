@@ -13,5 +13,8 @@ final class MainCoordinator {
   
   func goToSecond() {
     navigation.push(view: Text("Second").background(Color.red))
+    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+      self.navigation.present(view: Text("modal").background(Color.yellow).interactiveDismissDisabled(true))
+    }
   }
 }

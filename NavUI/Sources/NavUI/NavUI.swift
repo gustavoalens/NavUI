@@ -12,6 +12,10 @@ final public class Navigation {
     viewModel.push(view: StackedView(view: { view }))
   }
   
+  public func present(view: any View) {
+    viewModel.present(view: StackedView(view: { view }))
+  }
+  
   public func start<Root: View>(root: Root) -> some View {
     stack = [root]
     let viewModel = viewModel
@@ -29,6 +33,9 @@ struct NavUIView<ViewModel: NavUIViewModelProtocol, Root: View>: View {
         .navigationDestination(for: StackedView.self, destination: { stackedView in
           AnyView(stackedView.view())
         })
+        .sheet(item: $navigation.presenting) { stackedView in
+          AnyView(stackedView.view())
+        }
     }
   }
 }
@@ -37,10 +44,12 @@ struct NavUIView<ViewModel: NavUIViewModelProtocol, Root: View>: View {
 protocol NavUIViewModelProtocol: ObservableObject, AnyObject {
   var path: NavigationPath { get set }
   var stack: [StackedView] { get }
+  var presenting: StackedView? { get set }
 }
 
 final class NavUIViewModel: NavUIViewModelProtocol {
   @Published var path: NavigationPath = .init()
+  @Published var presenting: StackedView?
   private(set) var stack: [StackedView] = []
   
   init() { }
@@ -50,9 +59,13 @@ final class NavUIViewModel: NavUIViewModelProtocol {
     stack.append(view)
   }
   
+  func present(view: StackedView) {
+    presenting = view
+  }
+  
 }
 
-struct StackedView: Hashable {
+struct StackedView: Hashable, Identifiable {
   let id: UUID
   let view: () -> any View
   
