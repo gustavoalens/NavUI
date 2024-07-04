@@ -1,7 +1,7 @@
 import SwiftUI
 
-struct StackedView: Hashable, Identifiable {
-  let id: UUID
+public struct StackedView {
+  public let id: UUID
   let view: () -> any View
   
   init(id: UUID = UUID(), view: @escaping () -> any View) {
@@ -9,11 +9,14 @@ struct StackedView: Hashable, Identifiable {
     self.view = view
   }
   
-  static func == (lhs: StackedView, rhs: StackedView) -> Bool {
+}
+
+extension StackedView: Hashable, Identifiable {
+  public static func == (lhs: StackedView, rhs: StackedView) -> Bool {
     lhs.id == rhs.id
   }
   
-  func hash(into hasher: inout Hasher) {
+  public func hash(into hasher: inout Hasher) {
     hasher.combine(id)
   }
   

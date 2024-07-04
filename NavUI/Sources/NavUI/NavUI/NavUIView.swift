@@ -1,16 +1,16 @@
 import SwiftUI
 
 struct NavUIView<ViewModel: NavUIViewModelProtocol, Root: View>: View {
-  @ObservedObject var navigation: ViewModel
+  @ObservedObject var viewModel: ViewModel
   let root: Root
   
   public var body: some View {
-    NavigationStack(path: $navigation.path) {
+    NavigationStack(path: $viewModel.path) {
       root
         .navigationDestination(for: StackedView.self, destination: { stackedView in
-          AnyView(stackedView.view())
+          stackedView.getView()
         })
-        .sheet(item: $navigation.presenting) { stackedView in
+        .sheet(item: $viewModel.presenting) { stackedView in
           AnyView(stackedView.view())
         }
     }
