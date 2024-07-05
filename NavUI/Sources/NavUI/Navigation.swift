@@ -5,6 +5,7 @@ final public class Navigation {
   @Published var presenting: StackedView?
   var _stack: [StackedView] = []
   public var stack: [StackedView] { _stack }
+  var root: StackedView = .empty()
   
   public init() { }
   
@@ -35,6 +36,7 @@ final public class Navigation {
   }
   
   public func start<Root: View>(root: Root) -> some View {
+    self.root = StackedView(view: { root })
     return NavUIView(viewModel: self, root: root)
   }
 }
