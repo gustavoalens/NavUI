@@ -11,7 +11,7 @@ import SwiftUI
 struct NavUaiApp: App {
     var body: some Scene {
         WindowGroup {
-          MainCoordinator().start().background(Color.white)
+          TestsCoordinator().start().background(Color.white)
         }
     }
 }

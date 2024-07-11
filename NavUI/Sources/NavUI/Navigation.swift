@@ -31,6 +31,10 @@ final public class Navigation {
     pop(to: stackedView)
   }
   
+  public func pop<ViewType: View>(toViewType viewType: ViewType.Type) {
+    pop(to: viewType)
+  }
+  
   public func popToRootView() {
     popToRoot()
   }

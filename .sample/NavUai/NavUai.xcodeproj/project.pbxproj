@@ -7,15 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D5BB6992C3EDD31007C661C /* MultiplePushsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6982C3EDD31007C661C /* MultiplePushsCoordinator.swift */; };
+		1D5BB69B2C3EEE44007C661C /* MultiplePushsFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB69A2C3EEE44007C661C /* MultiplePushsFirstView.swift */; };
+		1D5BB69D2C3F2AA9007C661C /* MultiplePushsSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB69C2C3F2AA9007C661C /* MultiplePushsSecondView.swift */; };
+		1D5BB69F2C3F2B5C007C661C /* MultiplePushsThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB69E2C3F2B5C007C661C /* MultiplePushsThirdView.swift */; };
+		1D5BB6A22C408CA4007C661C /* PopCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6A12C408CA4007C661C /* PopCoordinator.swift */; };
+		1D5BB6A72C408D70007C661C /* PopToRootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6A62C408D70007C661C /* PopToRootCoordinator.swift */; };
+		1D5BB6A92C408D85007C661C /* PopToSpecificCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6A82C408D85007C661C /* PopToSpecificCoordinator.swift */; };
+		1D5BB6AB2C408D98007C661C /* PopToType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6AA2C408D98007C661C /* PopToType.swift */; };
+		1D95233F2C3DA7B5008EFE37 /* PushRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95233E2C3DA7B5008EFE37 /* PushRootView.swift */; };
+		1D9523412C3DA7C7008EFE37 /* PushFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9523402C3DA7C7008EFE37 /* PushFirstView.swift */; };
+		1D9523432C3DA944008EFE37 /* MultiplePushsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9523422C3DA944008EFE37 /* MultiplePushsRootView.swift */; };
+		1D9523452C3DA9B5008EFE37 /* PushCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9523442C3DA9B5008EFE37 /* PushCoordinator.swift */; };
 		1DCEFFBD2C2E2CC2000CCBE8 /* NavUaiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFBC2C2E2CC2000CCBE8 /* NavUaiApp.swift */; };
-		1DCEFFBF2C2E2CC2000CCBE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFBE2C2E2CC2000CCBE8 /* ContentView.swift */; };
+		1DCEFFBF2C2E2CC2000CCBE8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFBE2C2E2CC2000CCBE8 /* RootView.swift */; };
 		1DCEFFC12C2E2CC8000CCBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCEFFC02C2E2CC8000CCBE8 /* Assets.xcassets */; };
 		1DCEFFC42C2E2CC8000CCBE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCEFFC32C2E2CC8000CCBE8 /* Preview Assets.xcassets */; };
 		1DCEFFCE2C2E2CC9000CCBE8 /* NavUaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFCD2C2E2CC9000CCBE8 /* NavUaiTests.swift */; };
 		1DCEFFD82C2E2CC9000CCBE8 /* NavUaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFD72C2E2CC9000CCBE8 /* NavUaiUITests.swift */; };
 		1DCEFFDA2C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFD92C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift */; };
 		1DCEFFE92C2E2D1B000CCBE8 /* NavUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCEFFE82C2E2D1B000CCBE8 /* NavUI */; };
-		1DCEFFEB2C2E2D52000CCBE8 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFEA2C2E2D52000CCBE8 /* MainCoordinator.swift */; };
+		1DCEFFEB2C2E2D52000CCBE8 /* TestsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFEA2C2E2D52000CCBE8 /* TestsCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +48,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D5BB6982C3EDD31007C661C /* MultiplePushsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePushsCoordinator.swift; sourceTree = "<group>"; };
+		1D5BB69A2C3EEE44007C661C /* MultiplePushsFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePushsFirstView.swift; sourceTree = "<group>"; };
+		1D5BB69C2C3F2AA9007C661C /* MultiplePushsSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePushsSecondView.swift; sourceTree = "<group>"; };
+		1D5BB69E2C3F2B5C007C661C /* MultiplePushsThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePushsThirdView.swift; sourceTree = "<group>"; };
+		1D5BB6A12C408CA4007C661C /* PopCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCoordinator.swift; sourceTree = "<group>"; };
+		1D5BB6A62C408D70007C661C /* PopToRootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootCoordinator.swift; sourceTree = "<group>"; };
+		1D5BB6A82C408D85007C661C /* PopToSpecificCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToSpecificCoordinator.swift; sourceTree = "<group>"; };
+		1D5BB6AA2C408D98007C661C /* PopToType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToType.swift; sourceTree = "<group>"; };
+		1D95233E2C3DA7B5008EFE37 /* PushRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRootView.swift; sourceTree = "<group>"; };
+		1D9523402C3DA7C7008EFE37 /* PushFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushFirstView.swift; sourceTree = "<group>"; };
+		1D9523422C3DA944008EFE37 /* MultiplePushsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePushsRootView.swift; sourceTree = "<group>"; };
+		1D9523442C3DA9B5008EFE37 /* PushCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushCoordinator.swift; sourceTree = "<group>"; };
 		1DCEFFB92C2E2CC2000CCBE8 /* NavUai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavUai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCEFFBC2C2E2CC2000CCBE8 /* NavUaiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUaiApp.swift; sourceTree = "<group>"; };
-		1DCEFFBE2C2E2CC2000CCBE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1DCEFFBE2C2E2CC2000CCBE8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		1DCEFFC02C2E2CC8000CCBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DCEFFC32C2E2CC8000CCBE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1DCEFFC92C2E2CC9000CCBE8 /* NavUaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavUaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +71,7 @@
 		1DCEFFD72C2E2CC9000CCBE8 /* NavUaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUaiUITests.swift; sourceTree = "<group>"; };
 		1DCEFFD92C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUaiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1DCEFFE62C2E2CF9000CCBE8 /* NavUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NavUI; path = ../../NavUI; sourceTree = "<group>"; };
-		1DCEFFEA2C2E2D52000CCBE8 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		1DCEFFEA2C2E2D52000CCBE8 /* TestsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +100,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D5BB6A02C408C87007C661C /* Pop */ = {
+			isa = PBXGroup;
+			children = (
+				1D5BB6A12C408CA4007C661C /* PopCoordinator.swift */,
+			);
+			path = Pop;
+			sourceTree = "<group>";
+		};
+		1D5BB6A32C408CCE007C661C /* PopToRoot */ = {
+			isa = PBXGroup;
+			children = (
+				1D5BB6A62C408D70007C661C /* PopToRootCoordinator.swift */,
+			);
+			path = PopToRoot;
+			sourceTree = "<group>";
+		};
+		1D5BB6A42C408CD6007C661C /* PopToSpecific */ = {
+			isa = PBXGroup;
+			children = (
+				1D5BB6A82C408D85007C661C /* PopToSpecificCoordinator.swift */,
+			);
+			path = PopToSpecific;
+			sourceTree = "<group>";
+		};
+		1D5BB6A52C408CEB007C661C /* PopToType */ = {
+			isa = PBXGroup;
+			children = (
+				1D5BB6AA2C408D98007C661C /* PopToType.swift */,
+			);
+			path = PopToType;
+			sourceTree = "<group>";
+		};
+		1D95233A2C3DA6FD008EFE37 /* TestFlows */ = {
+			isa = PBXGroup;
+			children = (
+				1D95233B2C3DA70C008EFE37 /* Root */,
+				1D95233C2C3DA71C008EFE37 /* Push */,
+				1D95233D2C3DA726008EFE37 /* MultiplePushs */,
+				1D5BB6A02C408C87007C661C /* Pop */,
+				1D5BB6A32C408CCE007C661C /* PopToRoot */,
+				1D5BB6A42C408CD6007C661C /* PopToSpecific */,
+				1D5BB6A52C408CEB007C661C /* PopToType */,
+				1DCEFFEA2C2E2D52000CCBE8 /* TestsCoordinator.swift */,
+			);
+			path = TestFlows;
+			sourceTree = "<group>";
+		};
+		1D95233B2C3DA70C008EFE37 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1DCEFFBE2C2E2CC2000CCBE8 /* RootView.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		1D95233C2C3DA71C008EFE37 /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				1D9523442C3DA9B5008EFE37 /* PushCoordinator.swift */,
+				1D95233E2C3DA7B5008EFE37 /* PushRootView.swift */,
+				1D9523402C3DA7C7008EFE37 /* PushFirstView.swift */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
+		1D95233D2C3DA726008EFE37 /* MultiplePushs */ = {
+			isa = PBXGroup;
+			children = (
+				1D5BB6982C3EDD31007C661C /* MultiplePushsCoordinator.swift */,
+				1D9523422C3DA944008EFE37 /* MultiplePushsRootView.swift */,
+				1D5BB69A2C3EEE44007C661C /* MultiplePushsFirstView.swift */,
+				1D5BB69C2C3F2AA9007C661C /* MultiplePushsSecondView.swift */,
+				1D5BB69E2C3F2B5C007C661C /* MultiplePushsThirdView.swift */,
+			);
+			path = MultiplePushs;
+			sourceTree = "<group>";
+		};
 		1DCEFFB02C2E2CC2000CCBE8 = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +201,10 @@
 		1DCEFFBB2C2E2CC2000CCBE8 /* NavUai */ = {
 			isa = PBXGroup;
 			children = (
+				1D95233A2C3DA6FD008EFE37 /* TestFlows */,
 				1DCEFFBC2C2E2CC2000CCBE8 /* NavUaiApp.swift */,
-				1DCEFFBE2C2E2CC2000CCBE8 /* ContentView.swift */,
 				1DCEFFC02C2E2CC8000CCBE8 /* Assets.xcassets */,
 				1DCEFFC22C2E2CC8000CCBE8 /* Preview Content */,
-				1DCEFFEA2C2E2D52000CCBE8 /* MainCoordinator.swift */,
 			);
 			path = NavUai;
 			sourceTree = "<group>";
@@ -270,8 +370,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCEFFBF2C2E2CC2000CCBE8 /* ContentView.swift in Sources */,
-				1DCEFFEB2C2E2D52000CCBE8 /* MainCoordinator.swift in Sources */,
+				1D95233F2C3DA7B5008EFE37 /* PushRootView.swift in Sources */,
+				1D5BB6A92C408D85007C661C /* PopToSpecificCoordinator.swift in Sources */,
+				1DCEFFBF2C2E2CC2000CCBE8 /* RootView.swift in Sources */,
+				1D5BB6A22C408CA4007C661C /* PopCoordinator.swift in Sources */,
+				1D5BB6A72C408D70007C661C /* PopToRootCoordinator.swift in Sources */,
+				1D9523452C3DA9B5008EFE37 /* PushCoordinator.swift in Sources */,
+				1D9523412C3DA7C7008EFE37 /* PushFirstView.swift in Sources */,
+				1D5BB69B2C3EEE44007C661C /* MultiplePushsFirstView.swift in Sources */,
+				1D5BB69F2C3F2B5C007C661C /* MultiplePushsThirdView.swift in Sources */,
+				1D5BB6992C3EDD31007C661C /* MultiplePushsCoordinator.swift in Sources */,
+				1D5BB69D2C3F2AA9007C661C /* MultiplePushsSecondView.swift in Sources */,
+				1D5BB6AB2C408D98007C661C /* PopToType.swift in Sources */,
+				1DCEFFEB2C2E2D52000CCBE8 /* TestsCoordinator.swift in Sources */,
+				1D9523432C3DA944008EFE37 /* MultiplePushsRootView.swift in Sources */,
 				1DCEFFBD2C2E2CC2000CCBE8 /* NavUaiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
