@@ -48,7 +48,13 @@ final class NavUaiUITestsLaunchTests: XCTestCase {
   }
   
   func test_pop_view() throws {
-    let app = launchTestFlow(id: "popView")
+    let app = launchTestFlow(id: "pop")
+    
+    XCTAssertTrue(app.staticTexts["PopSecondID"].waitForExistence(timeout: 1))
+    app.buttons["back"].tap()
+    XCTAssertTrue(app.staticTexts["PopFirstID"].waitForExistence(timeout: 1))
+    app.buttons["back"].tap()
+    XCTAssertTrue(app.staticTexts["PopRootID"].waitForExistence(timeout: 1))
   }
   
   func test_pop_to_root() throws {

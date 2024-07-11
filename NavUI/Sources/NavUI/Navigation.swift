@@ -23,6 +23,7 @@ final public class Navigation {
     return stackedView
   }
   
+  @discardableResult
   public func popView() -> StackedView {
     return pop()
   }

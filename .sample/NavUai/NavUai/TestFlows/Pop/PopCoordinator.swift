@@ -9,6 +9,21 @@ final class PopCoordinator {
   }
   
   func start() -> some View {
-    return navigation.start(root: RootView(coordinator: self))
+    let root = navigation.start(root: PopRootView(coordinator: self))
+    doFirstPush()
+    doSecondPush()
+    return root
+  }
+  
+  func doFirstPush() {
+    navigation.push(view: PopFirstView(coordinator: self))
+  }
+  
+  func doSecondPush() {
+    navigation.push(view: PopSecondView(coordinator: self))
+  }
+  
+  func back() {
+    navigation.popView()
   }
 }
