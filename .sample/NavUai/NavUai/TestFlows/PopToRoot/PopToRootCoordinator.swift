@@ -9,7 +9,13 @@ final class PopToRootCoordinator {
   }
   
   func start() -> some View {
-    return EmptyView()
-//    return navigation.start(root: RootView(coordinator: self))
+    let root = navigation.start(root: PopToRootRootView(coordinator: self))
+    navigation.push(view: PopToRootFirstView())
+    navigation.push(view: PopToRootSecondView(coordinator: self))
+    return root
+  }
+  
+  func goToRoot() {
+    navigation.popToRootView()
   }
 }

@@ -59,11 +59,28 @@ final class NavUaiUITestsLaunchTests: XCTestCase {
   
   func test_pop_to_root() throws {
     let app = launchTestFlow(id: "popToRoot")
+
+    app.buttons["goToRoot"].tap()
+    XCTAssertTrue(app.staticTexts["PopToRootRootID"].waitForExistence(timeout: 1))
     
+    app.buttons["tryRootInRoot"].tap()
+    XCTAssertTrue(app.staticTexts["PopToRootRootID"].waitForExistence(timeout: 1))
   }
   
   func test_pop_to_specific() throws {
     let app = launchTestFlow(id: "popToSpecific")
+    
+    app.buttons["backToFirst"].tap()
+    XCTAssertTrue(app.staticTexts["PopToSpecificRootID"].waitForExistence(timeout: 1))
+    app.buttons["restart"].tap()
+    
+    app.buttons["backToSecond"].tap()
+    XCTAssertTrue(app.staticTexts["PopToRootRootID"].waitForExistence(timeout: 1))
+    app.buttons["restart"].tap()
+    
+    app.buttons["backToRoot"].tap()
+    XCTAssertTrue(app.staticTexts["PopToRootRootID"].waitForExistence(timeout: 1))
+    app.buttons["restart"].tap()
   }
   
   func test_pop_to_type() throws {
