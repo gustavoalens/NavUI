@@ -21,7 +21,7 @@ final class NavUaiUITestsLaunchTests: XCTestCase {
     
     XCTAssertTrue(app.staticTexts["PushRootID"].waitForExistence(timeout: 1))
     app.buttons["Next"].tap()
-    XCTAssertTrue(app.staticTexts["PushFirstID"].waitForExistence(timeout: 1))
+        XCTAssertTrue(app.staticTexts["PushFirstID"].waitForExistence(timeout: 1))
     
     app.navigationBars.buttons.element(boundBy: 0).tap()
     XCTAssertTrue(app.staticTexts["PushRootID"].waitForExistence(timeout: 1))
@@ -70,21 +70,42 @@ final class NavUaiUITestsLaunchTests: XCTestCase {
   func test_pop_to_specific() throws {
     let app = launchTestFlow(id: "popToSpecific")
     
-    app.buttons["backToFirst"].tap()
+    XCTAssertTrue(app.staticTexts["PopToSpecificLastID"].waitForExistence(timeout: 1))
+    app.buttons["goToRoot"].tap()
     XCTAssertTrue(app.staticTexts["PopToSpecificRootID"].waitForExistence(timeout: 1))
-    app.buttons["restart"].tap()
     
-    app.buttons["backToSecond"].tap()
-    XCTAssertTrue(app.staticTexts["PopToRootRootID"].waitForExistence(timeout: 1))
     app.buttons["restart"].tap()
+    XCTAssertTrue(app.staticTexts["PopToSpecificLastID"].waitForExistence(timeout: 1))
     
-    app.buttons["backToRoot"].tap()
-    XCTAssertTrue(app.staticTexts["PopToRootRootID"].waitForExistence(timeout: 1))
+    app.buttons["goToFirst"].tap()
+    XCTAssertTrue(app.staticTexts["PopToSpecificFirstID"].waitForExistence(timeout: 1))
+    
     app.buttons["restart"].tap()
+    XCTAssertTrue(app.staticTexts["PopToSpecificLastID"].waitForExistence(timeout: 1))
+    
+    app.buttons["goToSecond"].tap()
+    XCTAssertTrue(app.staticTexts["PopToSpecificSecondID"].waitForExistence(timeout: 1))
   }
   
   func test_pop_to_type() throws {
     let app = launchTestFlow(id: "popToType")
+    
+    
+    XCTAssertTrue(app.staticTexts["PopToTypeLastID"].waitForExistence(timeout: 1))
+    app.buttons["goToRoot"].tap()
+    XCTAssertTrue(app.staticTexts["PopToTypeRootID"].waitForExistence(timeout: 1))
+    
+    app.buttons["restart"].tap()
+    XCTAssertTrue(app.staticTexts["PopToTypeLastID"].waitForExistence(timeout: 1))
+    
+    app.buttons["goToFirst"].tap()
+    XCTAssertTrue(app.staticTexts["PopToTypeFirstID"].waitForExistence(timeout: 1))
+    
+    app.buttons["restart"].tap()
+    XCTAssertTrue(app.staticTexts["PopToTypeLastID"].waitForExistence(timeout: 1))
+    
+    app.buttons["goToSecond"].tap()
+    XCTAssertTrue(app.staticTexts["PopToTypeSecondID"].waitForExistence(timeout: 1))
   }
   
   private func launchTestFlow(id: String) -> XCUIApplication {

@@ -16,6 +16,10 @@ final public class Navigation {
     return stackedView
   }
   
+  public func push(stackedView: StackedView) {
+    push(view: stackedView)
+  }
+  
   @discardableResult
   public func present(view: any View) -> StackedView {
     let stackedView = StackedView(view: { view })
@@ -43,5 +47,10 @@ final public class Navigation {
   public func start<Root: View>(root: Root) -> some View {
     self.root = StackedView(view: { root })
     return NavUIView(viewModel: self, root: root)
+  }
+  
+  public func start(root: StackedView) -> some View {
+    self.root = root
+    return NavUIView(viewModel: self, root: AnyView(root.view()))
   }
 }

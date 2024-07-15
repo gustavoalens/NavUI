@@ -2,9 +2,9 @@ import SwiftUI
 
 public struct StackedView {
   public let id: UUID
-  let view: () -> any View
+  public let view: () -> any View
   
-  init(id: UUID = UUID(), view: @escaping () -> any View) {
+  public init(id: UUID = UUID(), view: @escaping () -> any View) {
     self.id = id
     self.view = view
   }
