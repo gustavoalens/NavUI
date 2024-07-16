@@ -35,6 +35,8 @@ final class TestsCoordinator {
       case .popToType:
         return AnyView(PopToTypeCoordinator(navigation: navigation).start())
         
+      case .present:
+        return AnyView(PresentCoordinator(navigation: navigation).start())
     }
   }
 }
@@ -47,4 +49,5 @@ enum TestFlow: String {
   case popToRoot
   case popToSpecific
   case popToType
+  case present
 }

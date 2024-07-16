@@ -108,6 +108,12 @@ final class NavUaiUITestsLaunchTests: XCTestCase {
     XCTAssertTrue(app.staticTexts["PopToTypeSecondID"].waitForExistence(timeout: 1))
   }
   
+  func test_present() throws {
+    let app = launchTestFlow(id: "present")
+    XCTAssertTrue(app.staticTexts["PresentRootID"].waitForExistence(timeout: 1))
+    XCTAssertTrue(app.staticTexts["PresentID"].waitForExistence(timeout: 1))
+  }
+  
   private func launchTestFlow(id: String) -> XCUIApplication {
     let app = XCUIApplication()
     app.launchEnvironment["TestFlowID"] = id
