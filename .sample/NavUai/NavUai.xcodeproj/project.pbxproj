@@ -14,10 +14,24 @@
 		1D5BB6A22C408CA4007C661C /* PopCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6A12C408CA4007C661C /* PopCoordinator.swift */; };
 		1D5BB6A72C408D70007C661C /* PopToRootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6A62C408D70007C661C /* PopToRootCoordinator.swift */; };
 		1D5BB6A92C408D85007C661C /* PopToSpecificCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6A82C408D85007C661C /* PopToSpecificCoordinator.swift */; };
-		1D5BB6AB2C408D98007C661C /* PopToType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6AA2C408D98007C661C /* PopToType.swift */; };
+		1D5BB6AB2C408D98007C661C /* PopToTypeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6AA2C408D98007C661C /* PopToTypeCoordinator.swift */; };
 		1D5BB6AD2C409F09007C661C /* PopFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6AC2C409F08007C661C /* PopFirstView.swift */; };
 		1D5BB6AF2C409FB1007C661C /* PopRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6AE2C409FB1007C661C /* PopRootView.swift */; };
 		1D5BB6B12C409FC1007C661C /* PopSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6B02C409FC1007C661C /* PopSecondView.swift */; };
+		1D5BB6B32C40A91E007C661C /* PopToRootRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6B22C40A91E007C661C /* PopToRootRootView.swift */; };
+		1D5BB6B52C40A94B007C661C /* PopToRootFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6B42C40A94B007C661C /* PopToRootFirstView.swift */; };
+		1D5BB6B72C40A959007C661C /* PopToRootSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6B62C40A959007C661C /* PopToRootSecondView.swift */; };
+		1D5BB6B92C40B6B8007C661C /* PopToSpecificRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6B82C40B6B8007C661C /* PopToSpecificRootView.swift */; };
+		1D5BB6BB2C40B6C3007C661C /* PopToSpecificFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6BA2C40B6C3007C661C /* PopToSpecificFirstView.swift */; };
+		1D5BB6BD2C40B6CE007C661C /* PopToSpecificSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6BC2C40B6CE007C661C /* PopToSpecificSecondView.swift */; };
+		1D5BB6BF2C40B6DD007C661C /* PopToSpecificLastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6BE2C40B6DC007C661C /* PopToSpecificLastView.swift */; };
+		1D5BB6C12C45E8F1007C661C /* PopToTypeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6C02C45E8F1007C661C /* PopToTypeRootView.swift */; };
+		1D5BB6C32C45E8FD007C661C /* PopToTypeFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6C22C45E8FD007C661C /* PopToTypeFirstView.swift */; };
+		1D5BB6C52C45E90A007C661C /* PopToTypeSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6C42C45E90A007C661C /* PopToTypeSecondView.swift */; };
+		1D5BB6C72C45E91B007C661C /* PopToTypeLastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6C62C45E91B007C661C /* PopToTypeLastView.swift */; };
+		1D5BB6CA2C45EE02007C661C /* PresentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6C92C45EE02007C661C /* PresentCoordinator.swift */; };
+		1D5BB6CC2C45EE56007C661C /* PresentRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6CB2C45EE56007C661C /* PresentRootView.swift */; };
+		1D5BB6CE2C45EE5F007C661C /* PresentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5BB6CD2C45EE5F007C661C /* PresentView.swift */; };
 		1D95233F2C3DA7B5008EFE37 /* PushRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95233E2C3DA7B5008EFE37 /* PushRootView.swift */; };
 		1D9523412C3DA7C7008EFE37 /* PushFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9523402C3DA7C7008EFE37 /* PushFirstView.swift */; };
 		1D9523432C3DA944008EFE37 /* MultiplePushsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9523422C3DA944008EFE37 /* MultiplePushsRootView.swift */; };
@@ -58,10 +72,24 @@
 		1D5BB6A12C408CA4007C661C /* PopCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCoordinator.swift; sourceTree = "<group>"; };
 		1D5BB6A62C408D70007C661C /* PopToRootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootCoordinator.swift; sourceTree = "<group>"; };
 		1D5BB6A82C408D85007C661C /* PopToSpecificCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToSpecificCoordinator.swift; sourceTree = "<group>"; };
-		1D5BB6AA2C408D98007C661C /* PopToType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToType.swift; sourceTree = "<group>"; };
+		1D5BB6AA2C408D98007C661C /* PopToTypeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToTypeCoordinator.swift; sourceTree = "<group>"; };
 		1D5BB6AC2C409F08007C661C /* PopFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopFirstView.swift; sourceTree = "<group>"; };
 		1D5BB6AE2C409FB1007C661C /* PopRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopRootView.swift; sourceTree = "<group>"; };
 		1D5BB6B02C409FC1007C661C /* PopSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopSecondView.swift; sourceTree = "<group>"; };
+		1D5BB6B22C40A91E007C661C /* PopToRootRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootRootView.swift; sourceTree = "<group>"; };
+		1D5BB6B42C40A94B007C661C /* PopToRootFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootFirstView.swift; sourceTree = "<group>"; };
+		1D5BB6B62C40A959007C661C /* PopToRootSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToRootSecondView.swift; sourceTree = "<group>"; };
+		1D5BB6B82C40B6B8007C661C /* PopToSpecificRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToSpecificRootView.swift; sourceTree = "<group>"; };
+		1D5BB6BA2C40B6C3007C661C /* PopToSpecificFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToSpecificFirstView.swift; sourceTree = "<group>"; };
+		1D5BB6BC2C40B6CE007C661C /* PopToSpecificSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToSpecificSecondView.swift; sourceTree = "<group>"; };
+		1D5BB6BE2C40B6DC007C661C /* PopToSpecificLastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToSpecificLastView.swift; sourceTree = "<group>"; };
+		1D5BB6C02C45E8F1007C661C /* PopToTypeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToTypeRootView.swift; sourceTree = "<group>"; };
+		1D5BB6C22C45E8FD007C661C /* PopToTypeFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToTypeFirstView.swift; sourceTree = "<group>"; };
+		1D5BB6C42C45E90A007C661C /* PopToTypeSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToTypeSecondView.swift; sourceTree = "<group>"; };
+		1D5BB6C62C45E91B007C661C /* PopToTypeLastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopToTypeLastView.swift; sourceTree = "<group>"; };
+		1D5BB6C92C45EE02007C661C /* PresentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentCoordinator.swift; sourceTree = "<group>"; };
+		1D5BB6CB2C45EE56007C661C /* PresentRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentRootView.swift; sourceTree = "<group>"; };
+		1D5BB6CD2C45EE5F007C661C /* PresentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentView.swift; sourceTree = "<group>"; };
 		1D95233E2C3DA7B5008EFE37 /* PushRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushRootView.swift; sourceTree = "<group>"; };
 		1D9523402C3DA7C7008EFE37 /* PushFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushFirstView.swift; sourceTree = "<group>"; };
 		1D9523422C3DA944008EFE37 /* MultiplePushsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplePushsRootView.swift; sourceTree = "<group>"; };
@@ -121,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				1D5BB6A62C408D70007C661C /* PopToRootCoordinator.swift */,
+				1D5BB6B22C40A91E007C661C /* PopToRootRootView.swift */,
+				1D5BB6B42C40A94B007C661C /* PopToRootFirstView.swift */,
+				1D5BB6B62C40A959007C661C /* PopToRootSecondView.swift */,
 			);
 			path = PopToRoot;
 			sourceTree = "<group>";
@@ -129,6 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				1D5BB6A82C408D85007C661C /* PopToSpecificCoordinator.swift */,
+				1D5BB6B82C40B6B8007C661C /* PopToSpecificRootView.swift */,
+				1D5BB6BA2C40B6C3007C661C /* PopToSpecificFirstView.swift */,
+				1D5BB6BC2C40B6CE007C661C /* PopToSpecificSecondView.swift */,
+				1D5BB6BE2C40B6DC007C661C /* PopToSpecificLastView.swift */,
 			);
 			path = PopToSpecific;
 			sourceTree = "<group>";
@@ -136,9 +171,23 @@
 		1D5BB6A52C408CEB007C661C /* PopToType */ = {
 			isa = PBXGroup;
 			children = (
-				1D5BB6AA2C408D98007C661C /* PopToType.swift */,
+				1D5BB6AA2C408D98007C661C /* PopToTypeCoordinator.swift */,
+				1D5BB6C02C45E8F1007C661C /* PopToTypeRootView.swift */,
+				1D5BB6C22C45E8FD007C661C /* PopToTypeFirstView.swift */,
+				1D5BB6C42C45E90A007C661C /* PopToTypeSecondView.swift */,
+				1D5BB6C62C45E91B007C661C /* PopToTypeLastView.swift */,
 			);
 			path = PopToType;
+			sourceTree = "<group>";
+		};
+		1D5BB6C82C45EDF1007C661C /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				1D5BB6C92C45EE02007C661C /* PresentCoordinator.swift */,
+				1D5BB6CB2C45EE56007C661C /* PresentRootView.swift */,
+				1D5BB6CD2C45EE5F007C661C /* PresentView.swift */,
+			);
+			path = Present;
 			sourceTree = "<group>";
 		};
 		1D95233A2C3DA6FD008EFE37 /* TestFlows */ = {
@@ -151,6 +200,7 @@
 				1D5BB6A32C408CCE007C661C /* PopToRoot */,
 				1D5BB6A42C408CD6007C661C /* PopToSpecific */,
 				1D5BB6A52C408CEB007C661C /* PopToType */,
+				1D5BB6C82C45EDF1007C661C /* Present */,
 				1DCEFFEA2C2E2D52000CCBE8 /* TestsCoordinator.swift */,
 			);
 			path = TestFlows;
@@ -382,19 +432,33 @@
 				1D95233F2C3DA7B5008EFE37 /* PushRootView.swift in Sources */,
 				1D5BB6A92C408D85007C661C /* PopToSpecificCoordinator.swift in Sources */,
 				1DCEFFBF2C2E2CC2000CCBE8 /* RootView.swift in Sources */,
+				1D5BB6B92C40B6B8007C661C /* PopToSpecificRootView.swift in Sources */,
 				1D5BB6A22C408CA4007C661C /* PopCoordinator.swift in Sources */,
 				1D5BB6A72C408D70007C661C /* PopToRootCoordinator.swift in Sources */,
+				1D5BB6C32C45E8FD007C661C /* PopToTypeFirstView.swift in Sources */,
 				1D9523452C3DA9B5008EFE37 /* PushCoordinator.swift in Sources */,
+				1D5BB6CE2C45EE5F007C661C /* PresentView.swift in Sources */,
+				1D5BB6BF2C40B6DD007C661C /* PopToSpecificLastView.swift in Sources */,
+				1D5BB6B32C40A91E007C661C /* PopToRootRootView.swift in Sources */,
 				1D9523412C3DA7C7008EFE37 /* PushFirstView.swift in Sources */,
+				1D5BB6C52C45E90A007C661C /* PopToTypeSecondView.swift in Sources */,
+				1D5BB6CA2C45EE02007C661C /* PresentCoordinator.swift in Sources */,
 				1D5BB69B2C3EEE44007C661C /* MultiplePushsFirstView.swift in Sources */,
+				1D5BB6CC2C45EE56007C661C /* PresentRootView.swift in Sources */,
 				1D5BB69F2C3F2B5C007C661C /* MultiplePushsThirdView.swift in Sources */,
 				1D5BB6992C3EDD31007C661C /* MultiplePushsCoordinator.swift in Sources */,
 				1D5BB69D2C3F2AA9007C661C /* MultiplePushsSecondView.swift in Sources */,
+				1D5BB6B72C40A959007C661C /* PopToRootSecondView.swift in Sources */,
 				1D5BB6AF2C409FB1007C661C /* PopRootView.swift in Sources */,
-				1D5BB6AB2C408D98007C661C /* PopToType.swift in Sources */,
+				1D5BB6BD2C40B6CE007C661C /* PopToSpecificSecondView.swift in Sources */,
+				1D5BB6BB2C40B6C3007C661C /* PopToSpecificFirstView.swift in Sources */,
+				1D5BB6AB2C408D98007C661C /* PopToTypeCoordinator.swift in Sources */,
+				1D5BB6C72C45E91B007C661C /* PopToTypeLastView.swift in Sources */,
 				1DCEFFEB2C2E2D52000CCBE8 /* TestsCoordinator.swift in Sources */,
 				1D5BB6B12C409FC1007C661C /* PopSecondView.swift in Sources */,
+				1D5BB6B52C40A94B007C661C /* PopToRootFirstView.swift in Sources */,
 				1D9523432C3DA944008EFE37 /* MultiplePushsRootView.swift in Sources */,
+				1D5BB6C12C45E8F1007C661C /* PopToTypeRootView.swift in Sources */,
 				1DCEFFBD2C2E2CC2000CCBE8 /* NavUaiApp.swift in Sources */,
 				1D5BB6AD2C409F09007C661C /* PopFirstView.swift in Sources */,
 			);
@@ -566,8 +630,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -596,8 +660,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
