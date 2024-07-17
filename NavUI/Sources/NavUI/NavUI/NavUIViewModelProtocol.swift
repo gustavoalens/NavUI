@@ -10,6 +10,6 @@ protocol NavUIViewModelProtocol: ObservableObject, AnyObject {
   func present(view: StackedView)
   func pop() -> StackedView
   func pop(to stackedView: StackedView)
-  func pop<ViewType: View>(to viewType: ViewType.Type)
+  func pop(to viewType: any View.Type)
   func popToRoot()
 }

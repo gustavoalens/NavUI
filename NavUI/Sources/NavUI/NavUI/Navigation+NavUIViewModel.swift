@@ -29,9 +29,9 @@ extension Navigation: NavUIViewModelProtocol {
     popTo(index: index)
   }
   
-  func pop<ViewType: View>(to viewType: ViewType.Type) {
-    guard let index = _stack.lastIndex(where: { $0.view() is ViewType }) else {
-      if root.view() is ViewType {
+  func pop(to viewType: any View.Type) {
+    guard let index = _stack.lastIndex(where: { type(of: $0.view()) == viewType }) else {
+      if type(of:root.view()) == viewType {
         popToRoot()
       }
       return
