@@ -100,7 +100,22 @@ final class NavUITests: XCTestCase {
   }
   
   func test_pop_to_type() throws { 
-    
+    let navigation = Navigation()
+    var pushedViews: [StackedView] = []
+    _ = navigation.start(root: TestView())
+    typedViews.forEach { typedView in
+      pushedViews.append(navigation.push(view: typedView.view))
+    }
+    Array(0..<typedViews.count).reversed().forEach { specificIndex in
+      XCTAssert(type(of: typedViews.last?.view) == type(of: navigation.stack.last?.view()))
+      navigation.pop(toViewType: typedViews[specificIndex].type)
+      XCTAssert(typedViews[specificIndex].isType(navigation.stack.last?.view()))
+      navigation.pop(toViewType: TestView.self)
+      XCTAssert(navigation.stack.isEmpty)
+      typedViews.forEach { typedView in
+        pushedViews.append(navigation.push(view: typedView.view))
+      }
+    }
   }
   
   func test_present() throws {
@@ -113,5 +128,40 @@ final class NavUITests: XCTestCase {
       XCTAssert(navigation.presenting?.view() as? TestView == view)
       navigation.push(view: view)
     }
+  }
+  
+  private let typedViews: [TypedViewTest] = [
+    .init(view: TestTypedView<Int>(), type: TestTypedView<Int>.self, isType: { $0 as? TestTypedView<Int> != nil }),
+    .init(view: TestTypedView<Float>(), type: TestTypedView<Float>.self, isType: { $0 as? TestTypedView<Float> != nil }),
+    .init(view: TestTypedView<Double>(), type: TestTypedView<Double>.self, isType: { $0 as? TestTypedView<Double> != nil }),
+    .init(view: TestTypedView<String>(), type: TestTypedView<String>.self, isType: { $0 as? TestTypedView<String> != nil }),
+    .init(view: TestTypedView<AnyView>(), type: TestTypedView<AnyView>.self, isType: { $0 as? TestTypedView<AnyView> != nil }),
+    .init(view: TestTypedView<Navigation>(), type: TestTypedView<Navigation>.self, isType: { $0 as? TestTypedView<Navigation> != nil }),
+    .init(view: TestTypedView<TestView>(), type: TestTypedView<TestView>.self, isType: { $0 as? TestTypedView<TestView> != nil }),
+    .init(view: TestTypedView<NavUITests>(), type: TestTypedView<NavUITests>.self, isType: { $0 as? TestTypedView<NavUITests> != nil }),
+    .init(view: TestTypedView<StackedView>(), type: TestTypedView<StackedView>.self, isType: { $0 as? TestTypedView<StackedView> != nil }),
+    .init(view: TestTypedView<Bool>(), type: TestTypedView<Bool>.self, isType: { $0 as? TestTypedView<Bool> != nil }),
+    .init(view: TestTypedView<Array<Int>>(), type: TestTypedView<Array<Int>>.self, isType: { $0 as? TestTypedView<Array<Int>> != nil }),
+    .init(view: TestTypedView<Array<Float>>(), type: TestTypedView<Array<Float>>.self, isType: { $0 as? TestTypedView<Array<Float>> != nil }),
+    .init(view: TestTypedView<Array<Double>>(), type: TestTypedView<Array<Double>>.self, isType: { $0 as? TestTypedView<Array<Double>> != nil }),
+    .init(view: TestTypedView<Array<String>>(), type: TestTypedView<Array<String>>.self, isType: { $0 as? TestTypedView<Array<String>> != nil }),
+    .init(view: TestTypedView<Array<AnyView>>(), type: TestTypedView<Array<AnyView>>.self, isType: { $0 as? TestTypedView<Array<AnyView>> != nil }),
+    .init(view: TestTypedView<Array<Navigation>>(), type: TestTypedView<Array<Navigation>>.self, isType: { $0 as? TestTypedView<Array<Navigation>> != nil }),
+    .init(view: TestTypedView<Array<TestView>>(), type: TestTypedView<Array<TestView>>.self, isType: { $0 as? TestTypedView<Array<TestView>> != nil }),
+    .init(view: TestTypedView<Array<NavUITests>>(), type: TestTypedView<Array<NavUITests>>.self, isType: { $0 as? TestTypedView<Array<NavUITests>> != nil }),
+    .init(view: TestTypedView<Array<StackedView>>(), type: TestTypedView<Array<StackedView>>.self, isType: { $0 as? TestTypedView<Array<StackedView>> != nil }),
+    .init(view: TestTypedView<Array<Bool>>(), type: TestTypedView<Array<Bool>>.self, isType: { $0 as? TestTypedView<Array<Bool>> != nil }),
+    .init(view: TestTypedView<Set<Int>>(), type: TestTypedView<Set<Int>>.self, isType: { $0 as? TestTypedView<Set<Int>> != nil }),
+    .init(view: TestTypedView<Set<Float>>(), type: TestTypedView<Set<Float>>.self, isType: { $0 as? TestTypedView<Set<Float>> != nil }),
+    .init(view: TestTypedView<Set<Double>>(), type: TestTypedView<Set<Double>>.self, isType: { $0 as? TestTypedView<Set<Double>> != nil }),
+    .init(view: TestTypedView<Set<String>>(), type: TestTypedView<Set<String>>.self, isType: { $0 as? TestTypedView<Set<String>> != nil }),
+    .init(view: TestTypedView<Set<NavUITests>>(), type: TestTypedView<Set<NavUITests>>.self, isType: { $0 as? TestTypedView<Set<NavUITests>> != nil }),
+    .init(view: TestTypedView<Set<Bool>>(), type: TestTypedView<Set<Bool>>.self, isType: { $0 as? TestTypedView<Set<Bool>> != nil }),
+  ]
+  
+  private struct TypedViewTest {
+    let view: any View
+    let type: any View.Type
+    let isType: (_ resultView: (any View)?) -> Bool
   }
 }
