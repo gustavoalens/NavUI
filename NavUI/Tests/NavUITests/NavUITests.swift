@@ -17,6 +17,7 @@ final class NavUITests: XCTestCase {
     let view = TestView()
     _ = navigation.start(root: view)
     XCTAssert((navigation.root.view() as? TestView) == view)
+    _ = navigation.start(root: StackedView(view: { view }))
   }
   
   func test_push_screen() throws {
