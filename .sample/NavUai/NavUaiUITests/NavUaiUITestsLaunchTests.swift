@@ -11,7 +11,7 @@ final class NavUaiUITestsLaunchTests: XCTestCase {
   }
   
   func test_start_root() throws {
-    let app = XCUIApplication()
+    let app = launchTestFlow(id: "root")
     app.launch()
     XCTAssertTrue(app.staticTexts["RootTitleID"].label == "Is RootView")
   }
