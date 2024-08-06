@@ -41,7 +41,6 @@
 		1DCEFFC12C2E2CC8000CCBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCEFFC02C2E2CC8000CCBE8 /* Assets.xcassets */; };
 		1DCEFFC42C2E2CC8000CCBE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DCEFFC32C2E2CC8000CCBE8 /* Preview Assets.xcassets */; };
 		1DCEFFCE2C2E2CC9000CCBE8 /* NavUaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFCD2C2E2CC9000CCBE8 /* NavUaiTests.swift */; };
-		1DCEFFD82C2E2CC9000CCBE8 /* NavUaiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFD72C2E2CC9000CCBE8 /* NavUaiUITests.swift */; };
 		1DCEFFDA2C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFD92C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift */; };
 		1DCEFFE92C2E2D1B000CCBE8 /* NavUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1DCEFFE82C2E2D1B000CCBE8 /* NavUI */; };
 		1DCEFFEB2C2E2D52000CCBE8 /* TestsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCEFFEA2C2E2D52000CCBE8 /* TestsCoordinator.swift */; };
@@ -102,9 +101,7 @@
 		1DCEFFC92C2E2CC9000CCBE8 /* NavUaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavUaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCEFFCD2C2E2CC9000CCBE8 /* NavUaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUaiTests.swift; sourceTree = "<group>"; };
 		1DCEFFD32C2E2CC9000CCBE8 /* NavUaiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavUaiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DCEFFD72C2E2CC9000CCBE8 /* NavUaiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUaiUITests.swift; sourceTree = "<group>"; };
 		1DCEFFD92C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavUaiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		1DCEFFE62C2E2CF9000CCBE8 /* NavUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = NavUI; path = ../../NavUI; sourceTree = "<group>"; };
 		1DCEFFEA2C2E2D52000CCBE8 /* TestsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,7 +236,6 @@
 		1DCEFFB02C2E2CC2000CCBE8 = {
 			isa = PBXGroup;
 			children = (
-				1DCEFFE62C2E2CF9000CCBE8 /* NavUI */,
 				1DCEFFBB2C2E2CC2000CCBE8 /* NavUai */,
 				1DCEFFCC2C2E2CC9000CCBE8 /* NavUaiTests */,
 				1DCEFFD62C2E2CC9000CCBE8 /* NavUaiUITests */,
@@ -287,7 +283,6 @@
 		1DCEFFD62C2E2CC9000CCBE8 /* NavUaiUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1DCEFFD72C2E2CC9000CCBE8 /* NavUaiUITests.swift */,
 				1DCEFFD92C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift */,
 			);
 			path = NavUaiUITests;
@@ -385,7 +380,7 @@
 			);
 			mainGroup = 1DCEFFB02C2E2CC2000CCBE8;
 			packageReferences = (
-				1DCEFFE72C2E2D1B000CCBE8 /* XCLocalSwiftPackageReference "../../NavUI" */,
+				1DCEFFE72C2E2D1B000CCBE8 /* XCLocalSwiftPackageReference "../../" */,
 			);
 			productRefGroup = 1DCEFFBA2C2E2CC2000CCBE8 /* Products */;
 			projectDirPath = "";
@@ -477,7 +472,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCEFFDA2C2E2CC9000CCBE8 /* NavUaiUITestsLaunchTests.swift in Sources */,
-				1DCEFFD82C2E2CC9000CCBE8 /* NavUaiUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,9 +788,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		1DCEFFE72C2E2D1B000CCBE8 /* XCLocalSwiftPackageReference "../../NavUI" */ = {
+		1DCEFFE72C2E2D1B000CCBE8 /* XCLocalSwiftPackageReference "../../" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../NavUI;
+			relativePath = ../../;
 		};
 /* End XCLocalSwiftPackageReference section */
 
