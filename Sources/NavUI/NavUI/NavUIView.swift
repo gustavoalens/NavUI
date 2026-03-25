@@ -1,18 +1,26 @@
 import SwiftUI
 
-struct NavUIView<ViewModel: NavUIViewModelProtocol, Root: View>: View {
-  @ObservedObject var viewModel: ViewModel
-  let root: Root
-  
-  public var body: some View {
-    NavigationStack(path: $viewModel.path) {
-      root
-        .navigationDestination(for: StackedView.self, destination: { stackedView in
-          stackedView.getView()
-        })
-        .sheet(item: $viewModel.presenting) { stackedView in
-          AnyView(stackedView.view())
+public struct NavUIView<Item: IdentifiableView, Nav: NavGator>: View {
+    let root: Item
+    @StateObject var navGator: Nav
+    
+    public init(navGator: Nav, root: Item) {
+        self.root = root
+        _navGator = StateObject(wrappedValue: navGator)
+    }
+    
+    public var body: some View {
+        NavigationStack(path: $navGator.path) {
+            root.destination
+                .navigationDestination(for: Item.self) { item in
+                    item.destination
+                }
+                .sheet(item: Binding<Item?>(
+                    get: { navGator.presenting as? Item },
+                    set: { newValue in navGator.presenting = newValue }
+                )) { item in
+                    item.destination
+                }
         }
     }
-  }
 }
