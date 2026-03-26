@@ -1,4 +1,5 @@
 import SwiftUI
+@testable import NavUI
 
 struct TestView: View, Identifiable, Equatable {
   let id: UUID = .init()
@@ -12,10 +13,10 @@ struct TestView: View, Identifiable, Equatable {
   TestView()
 }
 
-struct TestTypedView<T>: View, Equatable {
+struct TestTypedView<T>: IdentifiableView {
   let id: UUID = .init()
   
-  var body: some View {
-    Text("Is Test View Type \(T.self)")
+  var destination: some View {
+      Text("Is Test View Type \(String(describing: T.self))")
   }
 }
